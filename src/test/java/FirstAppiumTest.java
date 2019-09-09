@@ -12,16 +12,18 @@ import java.net.URL;
 public class FirstAppiumTest {
 
     @Test
-    public void firstAppiumTest() throws MalformedURLException {
+    public void firstAppiumTest2() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("deviceName","Android Emulator");
+        capabilities.setCapability("deviceName","Galaxy Nexus API 29");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
-        capabilities.setCapability("platformVersion", "4.4");
+        capabilities.setCapability("platformVersion", "10");
         capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
 //        capabilities.setCapability(MobileCapabilityType.APPLICATION_NAME, "com.android.calculator");
         WebDriver driver = new RemoteWebDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
         System.out.println(driver.toString());
+        driver.get("https://www.president.gov.ua/");
+        //driver.quit();
 
-        
+
     }
 }
