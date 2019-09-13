@@ -38,6 +38,24 @@ public class FirstAppiumTest {
         driver.quit();
     }
 
+    @Test()
+    public void firstAppiumTest3() throws IOException {
+        // Pre Steps: Android SDK, AVD MAnager with started device
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("deviceName","Nexus 7 API 29");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, Platform.ANDROID);
+        capabilities.setCapability("platformVersion", "10");
+        capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, BrowserType.CHROME);
+//        capabilities.setCapability(MobileCapabilityType.APPLICATION_NAME, "com.android.calculator");
+        WebDriver driver = new RemoteWebDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+        System.out.println(driver.toString());
+        driver.get("https://www.president.gov.ua/");
+        driver.get("http://appium.io");
+        driver.get("http://www.automationtestinghub.com");
+        driver.get("https://www.president.gov.ua/");
+        driver.quit();
+    }
+
     public void captureScreenshot(WebDriver driver) throws IOException {
         String extension = ".png";
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
