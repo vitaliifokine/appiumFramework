@@ -12,7 +12,6 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -20,7 +19,7 @@ import java.util.Date;
 public class FirstAppiumTest {
 
 
-    // Run browser tests 
+    // Run browser tests
     @Test()
     public void firstAppiumTest2() throws IOException {
         // Pre Steps: Android SDK, AVD MAnager with started device
